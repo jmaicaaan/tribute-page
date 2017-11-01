@@ -10,6 +10,7 @@ import AppComponent from './app.component';
 import ngLoadingBar from 'angular-loading-bar';
 import 'normalize.css';
 import 'animate.css';
+import './lib/timeline';
 
 angular.module('app', [
     ngResource,

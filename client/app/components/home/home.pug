@@ -1,2 +1,10 @@
 div(ui-view)
-  | {{ $ctrl.text }}
+  section.cd-container(id="cd-timeline")
+    .cd-timeline-block(ng-repeat="i in [1,2,3,4,5]")
+      .cd-timeline-img.cd-picture
+        img(ng-src="https://avatars3.githubusercontent.com/u/13105222?s=460&v=4" alt="Picture")
+      .cd-timeline-content
+        h2 Title of section
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+        a.cd-read-more(href="#") Read more
+        span.cd-date Jan 15

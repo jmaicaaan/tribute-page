@@ -4,7 +4,17 @@ class HomeController {
     this.text = 'Hola Amigo';
   };
   
-  $onInit = () => {};
+  $onInit = () => {
+    // todo directive
+    // var timelineBlocks = $('.cd-timeline-block');
+    // $(window).on('scroll', function(){
+    //   $timeline_block.each(function(){
+    //     if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
+    //       $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+    //     }
+    //   });
+    // });
+  };
 }
 
 export default HomeController;
