@@ -1,19 +1,15 @@
+import * as timelines from '../../assets/timeline.json';
+import * as logo from '../../assets/images/cd-icon-picture.svg';
+
 class HomeController {
   constructor() {
     "ngInject";
     this.text = 'Hola Amigo';
+    this.logo = logo.default;
+    this.timelines = timelines.data;
   };
   
   $onInit = () => {
-    // todo directive
-    // var timelineBlocks = $('.cd-timeline-block');
-    // $(window).on('scroll', function(){
-    //   $timeline_block.each(function(){
-    //     if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
-    //       $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
-    //     }
-    //   });
-    // });
   };
 }
 

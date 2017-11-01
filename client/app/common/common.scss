@@ -12,3 +12,7 @@ body {
    height: 100%;
    font: 16px 'Roboto', sans-serif;
 }
+
+html, div[ui-view], .cd-container  {
+  background-color: #e9f0f5 !important
+}
