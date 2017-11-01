@@ -11,6 +11,7 @@ import ngLoadingBar from 'angular-loading-bar';
 import 'normalize.css';
 import 'animate.css';
 import './lib/timeline';
+import './lib/modernizr';
 
 angular.module('app', [
     ngResource,
