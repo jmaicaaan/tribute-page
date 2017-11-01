@@ -16,6 +16,8 @@ import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import colorsSupported      from 'supports-color';
 import historyApiFallback   from 'connect-history-api-fallback';
+import modernizr from 'modernizr';
+import * as modernizrConfig from 'modernizr/lib/config-all.json'
 
 let root = 'client';
 
@@ -30,6 +32,10 @@ let resolveToComponents = (glob = '') => {
 
 let resolveToCommon = (glob = '') => {
   return path.join(root, 'app/common/', glob);// app/common/{glob}
+};
+
+let resolveToLib = (glob = '') => {
+  return path.join(root, 'app/lib/', glob);
 };
 
 // map of all paths
@@ -165,3 +171,9 @@ gulp.task('clean', (cb) => {
 });
 
 gulp.task('default', ['watch']);
+
+gulp.task('build-modernizr', (cb) => {
+  modernizr.build(modernizrConfig, (result) => {
+    fs.writeFileSync(resolveToLib() + '/modernizr.js', result);
+  });
+});
